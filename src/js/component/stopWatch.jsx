@@ -41,12 +41,12 @@ const StopWatch = () => {
 	useEffect(() => {
 		const timeInterval = setInterval(() => {
 			if (minutes === 59) {
-				setMinutes((prevHours) => (prevHours === 59 ? 0 : prevHours + 1));
+				setHours((prevHours) => (prevHours === 59 ? 0 : prevHours + 1));
 			}
 		}, 1000);
 
 		return () => clearInterval(timeInterval);
-	}, [hours]);
+	}, [minutes]);
 
 	// Hook para separar los digitos del tiempo
 	useEffect(() => {
