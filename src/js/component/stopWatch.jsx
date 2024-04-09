@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 const StopWatch = () => {
 
@@ -76,17 +78,17 @@ const StopWatch = () => {
 			<div className="container-fluid bg-dark">
 				<div className="row">
 					<div className="col-md-4 d-flex flex-row justify-content-center">
-					<p className="number-background"> <i class="fa-regular fa-clock"></i> </p>
-						<p className="number-background"> {tensHours} </p>
-						<p className="number-background"> {unitsHours} </p>
+						<h1 className="number-background"> <FontAwesomeIcon icon={faClock} style={{color: "#ffffff",}} /> </h1>
+						<h1 className="number-background"> {tensHours} </h1>
+						<h1 className="number-background"> {unitsHours} </h1>
 					</div>
 					<div className="col-md-4 d-flex flex-row justify-content-center">
-						<p className="number-background"> {tensMinutes} </p>
-						<p className="number-background"> {unitsMinutes} </p>
+						<h1 className="number-background"> {tensMinutes} </h1>
+						<h1 className="number-background"> {unitsMinutes} </h1>
 					</div>
 					<div className="col-md-4 d-flex flex-row justify-content-center">
-						<p className="number-background"> {tensSeconds} </p>
-						<p className="number-background"> {unitsSeconds} </p>
+						<h1 className="number-background"> {tensSeconds} </h1>
+						<h1 className="number-background"> {unitsSeconds} </h1>
 					</div>
 				</div>
 			</div>
